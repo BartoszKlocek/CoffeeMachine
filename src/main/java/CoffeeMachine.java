@@ -19,7 +19,7 @@ public class CoffeeMachine {
     }
 
     public void printState() {
-        System.out.println("The coffe machine has:\n");
+        System.out.println("The coffee machine has:\n");
         System.out.println(this.water + " of water");
         System.out.println(this.milk + " of milk");
         System.out.println(this.beans + " of coffe beans");
@@ -35,23 +35,24 @@ public class CoffeeMachine {
 
         switch (type) {
             case 1:
-                water = 250;
-                milk = 0;
-                beans = 16;
-                money = 4;
+                water = Coffee.ESPRESSO.getWater();
+                milk = Coffee.ESPRESSO.getMilk();
+                beans = Coffee.ESPRESSO.getBeans();
+                money = Coffee.ESPRESSO.getPrice();
+
                 break;
 
             case 2:
-                water = 350;
-                milk = 75;
-                beans = 20;
-                money = 7;
+                water = Coffee.LATTE.getWater();
+                milk = Coffee.LATTE.getMilk();
+                beans = Coffee.LATTE.getBeans();
+                money = Coffee.LATTE.getPrice();
                 break;
             case 3:
-                water = 200;
-                milk = 100;
-                beans = 12;
-                money = 6;
+                water = Coffee.CAPPUCCINO.getWater();
+                milk = Coffee.CAPPUCCINO.getMilk();
+                beans = Coffee.CAPPUCCINO.getBeans();
+                money = Coffee.CAPPUCCINO.getPrice();
                 break;
             default:
                 break;
